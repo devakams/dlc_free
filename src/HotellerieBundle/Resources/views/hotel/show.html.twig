@@ -1,0 +1,49 @@
+{% extends "HotellerieBundle::template_admin.html.twig" %}
+
+{% block item_hotel %}active{% endblock %}
+
+{% block breadcrumbs %}
+    <li class="active"><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+{% endblock %}
+
+{% block page_title %}Détails hotel{% endblock %}
+
+{% block body_content %}
+	<div class="row">
+		<div class="content">
+			<div class="col-sm-4">
+				<img class="img-responsive" src="{{ asset('uploads/images/hotel/' ~ hotel.image )}}" alt="{{ hotel.nom }}">
+			</div>
+
+			<div class="col-sm-6">
+			
+				<div class="box box-solid">
+				    <div class="box-header with-border">
+				    	<h1 class="box-title">{{ hotel.nom }}</h1>
+				    </div>
+
+
+				    <div class="box-body" style="font-size:15px;">
+				    	<dl>
+				        	<dt>Nom</dt>
+				        	<dd>{{ hotel.departement }}</dd>
+
+				        	<dt>Description</dt>
+				        	<dd>{{ hotel.description }}</dd>
+
+				        	<dt>Département</dt>
+				        	<dd>{{ hotel.departement }}</dd>
+
+				        	<dt>Adresse</dt>
+				        	<dd>{{ hotel.adresse }}</dd>
+
+				        	<dt>Contact</dt>
+				        	<dd>{{ hotel.contact }}</dd>
+
+				      	</dl>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

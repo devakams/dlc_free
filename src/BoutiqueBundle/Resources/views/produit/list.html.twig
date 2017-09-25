@@ -1,0 +1,64 @@
+{% extends "BoutiqueBundle::template_admin.html.twig" %}
+
+{% block item_produit %}active{% endblock %}
+
+{% block breadcrumbs %}
+    <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+    <li><a href="#">produit</a></li>
+    <li class="active">Liste</li>
+{% endblock %}
+
+{% block page_title %}Produit{% endblock %}
+
+{% block body_content %}
+
+	<div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Liste des produits</h3>
+        </div>
+            
+
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+         	       <tr>
+            	    	<th>N°</th>
+                	  	<th>Nom</th>
+                        <th>Description</th>
+                        <th>Producteur</th>
+                        <th>Département</th>
+                        <th>Contact</th>
+                        <th>Disponibilité</th>
+                        <th></th>
+                	</tr>
+                </thead>
+                
+                <tbody>
+                	{% for produit in produits %}
+	                	<tr>
+	                  		<td>{{ produit.id}}</td>
+	                  		<td>{{ produit.nom }}</td>
+                            <td>{{ produit.description }}</td>
+                            <td>{{ produit.producteur }}</td>
+                            <td>{{ produit.departement }}</td>
+                            <td>{{ produit.contact }}</td>
+                            <td>{{ produit.disponibilite }}</td>
+                            <td>
+                                <a href="{{ path('boutique_produit_show', { 'id': produit.id }) }}" title="Afficher"><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list"></span></button></a>
+
+                                <a href="{{ path('boutique_produit_update', { 'id': produit.id }) }}" title="Modifier"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-edit"></span></button></a>
+
+                                <a href="{{ path('boutique_produit_delete', { 'id': produit.id }) }}" title="Supprimer" data-confirm="Vous êtes sur le point de supprimer. Etes-vous sûr de bien vouloir effectué cette opération ?"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+                                </a>
+                            </td>
+	                	</tr>
+                	{% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="well">
+    <label>Ajouter un nouveau produit </label> <a href="{{ path('boutique_produit_new') }}" title="Afficher"><button class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></button></a>
+    </div>
+{% endblock %}

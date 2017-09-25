@@ -2,6 +2,15 @@ imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
     - { resource: services.yml }
+    - { resource: "@BoutiqueBundle/Resources/config/services.yml" }
+    - { resource: "@HotellerieBundle/Resources/config/services.yml" }
+    - { resource: "@RestaurationBundle/Resources/config/services.yml" }
+    - { resource: "@AdminBundle/Resources/config/services.yml" }
+    - { resource: "@CultureBundle/Resources/config/services.yml" }
+    - { resource: "@CampementBundle/Resources/config/services.yml" }
+    - { resource: "@EvenementBundle/Resources/config/services.yml" }
+    - { resource: "@UtilisateurBundle/Resources/config/services.yml" }
+    - { resource: "@BaseBundle/Resources/config/services.yml" }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -35,6 +44,10 @@ twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
 
+    #parametres globals twig
+    globals:
+        webmaster: Abdoulaye KAMA
+
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -64,3 +77,51 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+
+#uploading files
+vich_uploader:
+    db_driver: orm
+    mappings:
+        image_produit:
+            uri_prefix:         /uploads/images/produit
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/produit'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        image_article:
+            uri_prefix:         /uploads/images/article
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/article'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        image_hotel:
+            uri_prefix:         /uploads/images/hotel
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/hotel'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        image_restaurant:
+            uri_prefix:         /uploads/images/restaurant
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/restaurant'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        image_diaporama:
+            uri_prefix:         /uploads/images/diaporama
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/diaporama'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        image_user:
+            uri_prefix:         /uploads/images/user
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/user'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true
+        image_client:
+            uri_prefix:         /uploads/images/client
+            upload_destination: '%kernel.root_dir%/../web/uploads/images/client'
+            inject_on_load:     false
+            delete_on_update:   true
+            delete_on_remove:   true

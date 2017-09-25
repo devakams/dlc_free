@@ -1,0 +1,30 @@
+.logo{
+	width:5em; 
+	height: 5em;
+}
+
+.menu_banniere{
+	padding: 15px 0 5px;
+}
+
+.menu_banniere ul li{
+	display: inline-block;
+	top: 10px;
+	padding: 0em 1em;
+	color: #FFFFFF;
+}
+
+
+.menu_banniere ul li a {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.phone_banniere{
+	text-transform: uppercase;
+	color: red;
+	font-size: 1em;
+	margin-top: 1em;
+}
+

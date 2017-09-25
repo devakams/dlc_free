@@ -1,0 +1,58 @@
+{% extends "RestaurationBundle::template_admin.html.twig" %}
+
+{% block item_restaurant %}active{% endblock %}
+
+{% block breadcrumbs %}
+    <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+    <li><a href="#">Restaurant</a></li>
+    <li class="active">Liste</li>
+{% endblock %}
+
+{% block page_title %}Liste des restaurants{% endblock %}
+
+{% block body_content %}
+
+	<div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Liste des restaurants ...</h3>
+        </div>
+            
+
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+         	       <tr>
+            	    	<th>N°</th>
+                	  	<th>Nom</th>
+                        <th>Département</th>
+                        <th>Adresse</th>
+                        <th>Ajouté le </th>
+                        <th>Contact</th>
+                        <th></th>
+                	</tr>
+                </thead>
+                
+                <tbody>
+                	{% for restaurant in restaurants %}
+	                	<tr>
+	                  		<td>{{ restaurant.id}}</td>
+	                  		<td>{{ restaurant.nom }}</td>
+                            <td>{{ restaurant.departement }}</td>
+                            <td>{{ restaurant.adresse }}</td>
+                            <td>{{ restaurant.dateAjout|date('Y-m-d H:i:s') }}</td>
+                            <td>{{ restaurant.contact }}</td>
+                            <td>
+                                <a href="{{ path('restauration_restaurant_show', { 'id': restaurant.id }) }}" title="Afficher"><button class="btn btn-info btn-xs"><span class="glyphicon glyphicon-list"></span></button></a>
+
+                                <a href="{{ path('restauration_restaurant_update', { 'id': restaurant.id }) }}" title="Modifier"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-edit"></span></button></a>
+
+                                <a href="{{ path('restauration_restaurant_delete', { 'id': restaurant.id }) }}" title="Supprimer" data-confirm="Vous êtes sur le point de supprimer. Etes-vous sûr de bien vouloir effectué cette opération ?"><button class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+                                </a>
+                            </td>
+	                	</tr>
+                	{% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

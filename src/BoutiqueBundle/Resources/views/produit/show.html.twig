@@ -1,0 +1,51 @@
+{% extends "BoutiqueBundle::template_admin.html.twig" %}
+
+{% block item_produit %}active{% endblock %}
+
+{% block breadcrumbs %}
+    <li class="active"><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+{% endblock %}
+
+{% block page_title %}Détails du produit{% endblock %}
+
+{% block body_content %}
+
+	<div class="row">
+		<div class="content">
+			<div class="col-sm-4">
+				<img class="img-responsive" src="{{ asset('uploads/images/produit/' ~ produit.imageName )}}" alt="{{ produit.nom }}">
+			</div>
+
+			<div class="col-sm-6">
+			
+				<div class="box box-solid">
+				    <div class="box-header with-border">
+				    	<h1 class="box-title">{{ produit.nom }}</h1>
+				    </div>
+
+
+				    <div class="box-body" style="font-size:15px;">
+				    	<dl>
+				        	<dt>Nom</dt>
+				        	<dd>{{ produit.nom }}</dd>
+
+				        	<dt>Description</dt>
+				        	<dd>{{ produit.description }}</dd>
+
+				        	<dt>Producteur</dt>
+				        	<dd>{{ produit.producteur }}</dd>
+
+				        	<dt>Département</dt>
+				        	<dd>{{ produit.departement }}</dd>
+
+				        	<dt>Contact</dt>
+				        	<dd>{{ produit.contact }}</dd>
+
+				      	</dl>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

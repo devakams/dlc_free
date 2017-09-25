@@ -1,0 +1,41 @@
+{% extends "UtilisateurBundle::template_client.html.twig" %}
+
+
+{% block breadcrumbs %}
+    <li class="active"><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+{% endblock %}
+
+{% block page_title %}Détails du client{% endblock %}
+
+{% block body_content %}
+
+	<div class="row">
+		<div class="content">
+			<div class="col-sm-4">
+				<img class="img-responsive" src="{{ asset('uploads/images/client/' ~ client.image )}}" alt="{{ client.nom }}">
+			</div>
+
+			<div class="col-sm-6">
+			
+				<div class="box box-solid">
+
+				    <div class="box-body" style="font-size:15px;">
+				    	<dl>
+				        	<dt>Nom</dt>
+				        	<dd>{{ client.nom }}</dd>
+
+				        	<dt>Prénom</dt>
+				        	<dd>{{ client.prenom }}</dd>
+
+				        	<dt>Date Inscrit</dt>
+				        	<dd>{{ client.dateInscrit|date("d-m-Y H:i:s") }}</dd>
+
+
+				      	</dl>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

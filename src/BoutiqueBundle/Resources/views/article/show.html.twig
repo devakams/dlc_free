@@ -1,0 +1,48 @@
+{% extends "BoutiqueBundle::template_admin.html.twig" %}
+
+{% block item_article %}active{% endblock %}
+
+{% block breadcrumbs %}
+    <li class="active"><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+{% endblock %}
+
+{% block page_title %}Détails du article{% endblock %}
+
+{% block body_content %}
+
+	<div class="row">
+		<div class="content">
+			<div class="col-sm-4">
+				<img class="img-responsive" src="{{ asset('uploads/images/article/' ~ article.image )}}" alt="{{ article.designation }}">
+			</div>
+
+			<div class="col-sm-6">
+			
+				<div class="box box-solid">
+
+				    <div class="box-body" style="font-size:15px;">
+				    	<dl>
+				        	<dt>Désignation</dt>
+				        	<dd>{{ article.designation }}</dd>
+
+				        	<dt>Description</dt>
+				        	<dd>{{ article.description }}</dd>
+
+				        	<dt>Date ajout</dt>
+				        	<dd>{{ article.dateAjout|date("d-m-Y H:i:s") }}</dd>
+
+				        	<dt>Quantité</dt>
+				        	<dd>{{ article.quantite }}</dd>
+
+				        	<dt>Prix unitaire</dt>
+				        	<dd>{{ article.prix }}</dd>
+
+
+				      	</dl>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

@@ -18,10 +18,18 @@ class ComposerStaticInit8d9551bec162583cd7091597f4a8195d
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6a47392539ca2329373e0d33e1dba053' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/bootstrap.php',
         '32dcc8afd4335739640db7d200c1971d' => __DIR__ . '/..' . '/symfony/polyfill-apcu/bootstrap.php',
-        '719971e375036615a0685b6fb054583d' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
+        '2a13db869559c451f6583b0efdebbdd1' => __DIR__ . '/..' . '/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'V' => 
+        array (
+            'Vich\\UploaderBundle\\' => 20,
+        ),
+        'U' => 
+        array (
+            'UtilisateurBundle\\' => 18,
+        ),
         'T' => 
         array (
             'Twig\\' => 5,
@@ -48,6 +56,10 @@ class ComposerStaticInit8d9551bec162583cd7091597f4a8195d
             'Sensio\\Bundle\\GeneratorBundle\\' => 30,
             'Sensio\\Bundle\\FrameworkExtraBundle\\' => 35,
         ),
+        'R' => 
+        array (
+            'RestaurationBundle\\' => 19,
+        ),
         'P' => 
         array (
             'Psr\\Log\\' => 8,
@@ -60,19 +72,50 @@ class ComposerStaticInit8d9551bec162583cd7091597f4a8195d
         array (
             'Incenteev\\ParameterHandler\\' => 27,
         ),
+        'H' => 
+        array (
+            'HotellerieBundle\\' => 17,
+        ),
+        'F' => 
+        array (
+            'FOS\\UserBundle\\' => 15,
+        ),
+        'E' => 
+        array (
+            'EvenementBundle\\' => 16,
+        ),
         'D' => 
         array (
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
+        'C' => 
+        array (
+            'CultureBundle\\' => 14,
+            'CampementBundle\\' => 16,
+        ),
+        'B' => 
+        array (
+            'BoutiqueBundle\\' => 15,
+            'BaseBundle\\' => 11,
+        ),
         'A' => 
         array (
             'AppBundle\\' => 10,
+            'AdminBundle\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Vich\\UploaderBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vich/uploader-bundle',
+        ),
+        'UtilisateurBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/UtilisateurBundle',
+        ),
         'Twig\\' => 
         array (
             0 => __DIR__ . '/..' . '/twig/twig/src',
@@ -153,6 +196,10 @@ class ComposerStaticInit8d9551bec162583cd7091597f4a8195d
         array (
             0 => __DIR__ . '/..' . '/sensio/framework-extra-bundle',
         ),
+        'RestaurationBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/RestaurationBundle',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
@@ -164,6 +211,18 @@ class ComposerStaticInit8d9551bec162583cd7091597f4a8195d
         'Incenteev\\ParameterHandler\\' => 
         array (
             0 => __DIR__ . '/..' . '/incenteev/composer-parameter-handler',
+        ),
+        'HotellerieBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/HotellerieBundle',
+        ),
+        'FOS\\UserBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofsymfony/user-bundle',
+        ),
+        'EvenementBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/EvenementBundle',
         ),
         'Doctrine\\Common\\Cache\\' => 
         array (
@@ -177,9 +236,29 @@ class ComposerStaticInit8d9551bec162583cd7091597f4a8195d
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
         ),
+        'CultureBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/CultureBundle',
+        ),
+        'CampementBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/CampementBundle',
+        ),
+        'BoutiqueBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/BoutiqueBundle',
+        ),
+        'BaseBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/BaseBundle',
+        ),
         'AppBundle\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/AppBundle',
+        ),
+        'AdminBundle\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/AdminBundle',
         ),
     );
 
@@ -200,6 +279,13 @@ class ComposerStaticInit8d9551bec162583cd7091597f4a8195d
             'SensioLabs\\Security' => 
             array (
                 0 => __DIR__ . '/..' . '/sensiolabs/security-checker',
+            ),
+        ),
+        'M' => 
+        array (
+            'Metadata\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/jms/metadata/src',
             ),
         ),
         'D' => 

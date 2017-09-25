@@ -16,6 +16,20 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new AppBundle\AppBundle(),
+
+            //requirements
+            new Vich\UploaderBundle\VichUploaderBundle(),
+
+            //application,
+            new BoutiqueBundle\BoutiqueBundle(),
+            new HotellerieBundle\HotellerieBundle(),
+            new RestaurationBundle\RestaurationBundle(),
+            new AdminBundle\AdminBundle(),
+            new CultureBundle\CultureBundle(),
+            new CampementBundle\CampementBundle(),
+            new EvenementBundle\EvenementBundle(),
+            new UtilisateurBundle\UtilisateurBundle(),
+            new BaseBundle\BaseBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

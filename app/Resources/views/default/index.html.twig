@@ -1,13 +1,159 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-	
+    
+    {% block header %}
+
+    {% endblock %}
+
+    <!-- menu -->
+    {% block menu %}
+        
+    {% endblock %}
+
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft" data-wow-delay=".5s">
+
+                {% block breadcrumbs %}
+                {% endblock %}
+
+            </ol>
+        </div>
+    </div>
+
+    {% block body_content %}
+
+    {% endblock %}
+
+    {% block footer %}
+        
+    {% endblock %}
+
 {% endblock %}
 
 {% block stylesheets %}
 
+
+    <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" type="text/css" media="all">
+
+    <link rel="stylesheet" href="{{ asset('font-awesome/css/font-awesome.min.css') }}" type="text/css" media="all">
+
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}"  type="text/css" media="all">
+
+    <link rel="stylesheet" href="{{ asset('css/new_style_client.css') }}"  type="text/css" media="all">
+
+    
+
+    <link href="{{ asset('//fonts.googleapis.com/css?family=Raleway:400,100,100italic,200,200italic,300,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic') }}" rel='stylesheet' type='text/css'>
+
+    <link href="{{ asset('//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic') }}" rel='stylesheet' type='text/css'>
+
+    
+    <link href="{{ asset('css/skdslider.css') }}" rel="stylesheet"/>
+
+
 {% endblock %}
 
 {% block javascripts %}
+    <script type="application/x-javascript"> 
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar(){ window.scrollTo(0,1); } 
+    </script>
 
+    <script src="{{ asset('jquery/jquery.min.js') }}"></script>
+
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="{{ asset('js/move-top.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/easing.js') }}"></script>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){     
+                event.preventDefault();
+                $("html,body").animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <!-- start-smoth-scrolling -->
+
+   
+
+    <!-- maintenir le menu du haut -->
+    <script>
+    $(document).ready(function() {
+         var navoffeset=$(".navigation-agileits").offset().top;
+         $(window).scroll(function(){
+            var scrollpos=$(window).scrollTop(); 
+            if(scrollpos >=navoffeset){
+                $(".navigation-agileits").addClass("fixed");
+            }else{
+                $(".navigation-agileits").removeClass("fixed");
+            }
+         });
+         
+    });
+    </script>
+
+
+
+     <!-- main slider-banner -->
+    <script src="{{ asset('js/skdslider.min.js') }}"></script>
+    
+    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <!-- top-header and slider -->
+
+    <!-- here stars scrolling icon -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+                var defaults = {
+                containerID: 'toTop', // fading element id
+                containerHoverID: 'toTopHover', // fading element hover id
+                scrollSpeed: 1200,
+                easingType: 'linear' 
+                };
+            */
+                                
+            $().UItoTop({ easingType: "easeOutQuart" });
+                                
+            });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <script src="{{ asset('js/minicart.min.js') }}"></script>
+    <script>
+        paypal.minicart.render();
+
+        paypal.minicart.cart.on("checkout", function (evt) {
+            var items = this.items(),
+                len = items.length,
+                total = 0,
+                i;
+
+            // Count the number of each item in the cart
+            for (i = 0; i < len; i++) {
+                total += items[i].get("quantity");
+            }
+
+            if (total < 3) {
+                //alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+                evt.preventDefault();
+            }
+        });
+
+    </script>
+    
+    
+    <script type="text/javascript">
+           jQuery(document).ready(function(){
+            jQuery("#slides").skdslider({"delay":2000, "animationSpeed": 2000,"showNextPrev":true,"showPlayButton":true,"autoSlide":true,"animationType":"fading"});
+                        
+            jQuery("#responsive").change(function(){
+              $("#responsive_wrapper").width(jQuery(this).val());
+            });
+            
+        });
+    </script>   
+    <!-- //main slider-banner --> 
 {% endblock %}

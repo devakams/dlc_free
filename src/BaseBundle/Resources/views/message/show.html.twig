@@ -1,0 +1,48 @@
+{% extends "BaseBundle::template.html.twig" %}
+
+{% block body_content %}
+	<div class="row">
+		<div class="container">
+
+			<div class="col-sm-6">
+			
+				<div class="box box-solid">
+
+				    <div class="box-body" style="font-size:15px;">
+				    	<dl>
+				        	<dt>Prénom</dt>
+				        	<dd>{{ message.prenom }}</dd>
+
+				        	<dt>Nom</dt>
+				        	<dd>{{ message.nom }}</dd>
+
+				        	<dt>E-mail</dt>
+				        	<dd>{{ message.email }}</dd>
+
+				        	<dt>Message</dt>
+				        	<dd>{{ message.message }}</dd>
+
+				        	<dt>Date</dt>
+				        	<dd>{{ message.dateRecu|date("d-m-Y à H:i:s") }}</dd>
+
+
+				      	</dl>
+				    </div>
+				</div>
+			</div>
+
+			<a href="{{ path('base_base_index') }}" title="Revenir à la page d'accueil"><button class="btn btn-info btn-xs" style="width:100px; height:3em;">Revenir à la page d'accueil</button></a>
+
+		</div>
+	</div>
+
+
+
+
+{% endblock %}
+
+
+{% block breadcrumbs %}
+	<li><a href="{{ path('base_base_index') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+    <li class="active">Contact</li>
+{% endblock %}

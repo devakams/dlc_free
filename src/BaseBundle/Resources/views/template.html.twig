@@ -1,0 +1,205 @@
+{% extends ":default:index.html.twig" %}
+{% block body_content %}
+
+{% endblock %}
+
+
+{% block breadcrumbs %}
+
+{% endblock %}
+
+{% block menu %}
+    <div class="navigation-agileits">
+        <div class="container">
+            <nav class="navbar navbar-default">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header nav_2">
+                    <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div> 
+                <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{{ path('base_base_index') }}" class="act">Accueil</a></li>   
+                        <!-- Mega Menu -->
+                        <li>
+                            <a href="#">Hotels</a>
+                            
+                        </li>
+
+                        <li><a href="">Restaurants</a></li>
+                        <li><a href="">Campements</a></li>
+                        <li><a href="">Evenements</a></li>
+                        <li><a href=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+{% endblock %}
+
+{% block header %}
+
+    <!-- baniere -->
+    <div class="agileits_header" style="vertical-align: middle; text-align: center;">
+        <!--div class="row">
+            <div class="container"-->
+                
+                <div class="banniere_header">
+                    <div class="col-md-2" >
+                        <img class="logo" src="{{ asset('images/logo.png') }}">
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="menu_banniere">
+                            <ul>
+                                <li><a href="{{ path('utilisateur_baseclient_new') }}">Créer un compte</a></li>
+                                <li><a href="">Se connecter</a></li>
+                                <li><a href="{{ path('base_base_contact') }}">Contact</a></li>
+                            </ul>
+                        </div>
+                       
+                    </div>
+
+                    <div class="col-md-4" >
+                        
+                        <div class="phone_banniere">
+                            <i class="fa fa-phone" aria-hidden="true"></i> Appelez nous: (+77) 0000000
+                        </div>
+                    </div>
+                </div>
+
+            <!--/div-->
+
+            <div class="clearfix"> </div>
+        <!--/div-->
+    </div>
+
+    <div class="logo_products" style="margin: 10px;">
+        <div class="container">
+            <div class="w3ls_logo_products_left" style="width: 100%;">
+                <h1><a>COMMENDEZ en CASAMANCE | RECUPERER A DAKAR</a></h1>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+
+    
+
+{% endblock %}
+
+{% block footer %}
+    <!-- //footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="w3_footer_grids">
+                <div class="col-md-3 w3_footer_grid">
+                    <h3>Suivez nous sur:</h3>
+                    
+                    <div class="">
+                        <div class="container">
+                            <div class="">
+                                <ul>
+                                    
+                                    <a href="https://facebook.com/delacasamance/?fref=ts" class="w3_agile_facebook">
+                                        <li style="border: 1px solid #fff; width:2em; height:2em; border-radius:50%; text-align: center; line-height: 12px; font-size: 18px; color: #fff; margin: 5px; padding:5px;">
+                                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                                        </li>
+                                    </a>
+                                    
+                                     
+                                    <a href="https://twitter.com/delacasamance" class="agile_twitter">
+                                        <li style="border: 1px solid #fff; width:2em; height:2em; border-radius:50%; text-align: center; line-height: 12px; font-size: 18px; color: #fff; margin: 5px; padding:5px;">
+                                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                                        </li>
+                                    </a>
+
+                                    <a href="https://plus.google.com/delacasamance/" class="w3_agile_dribble">
+                                        <li style="border: 1px solid #fff; width:2em; height:2em; border-radius:50%; text-align: center; line-height: 12px; font-size: 18px; color: #fff; margin: 5px; padding:5px;">
+                                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                                        </li>
+                                    </a>
+
+                                    <a href="https://www.instagram.com/delacasamance" class="w3_agile_vimeo">
+                                        <li style="border: 1px solid #fff; width:2em; height:2em; border-radius:50%; text-align: center; line-height: 12px; font-size: 18px; color: #fff; margin: 5px; padding:5px;">
+                                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                                        </li>
+                                    </a>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-3 w3_footer_grid">
+                    <h3>INFORMATIONS</h3>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Nouveaux produits</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Meilleures ventes</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Conditions de retour</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 w3_footer_grid">
+                    <h3>MON COMPTE</h3>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Mon panier</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Mon compte</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Comment commander?</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Service clients</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 w3_footer_grid">
+                    <h3>ADRESSES UTILES</h3>
+                    <ul class="info"> 
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Aéroports</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Port</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Cliniques</a></li>
+                        <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a href="">Sapeurs-pompiers</a></li>
+                    </ul>
+                    
+                    
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            
+            <div class="container">
+                <p>© 2017 DLC. All rights reserved | Design by Abdoulaye KAMA</p>
+            </div>
+        </div>
+        
+    </div>  
+    <!--div class="footer-botm">
+        <div class="container">
+            <div class="w3layouts-foot">
+                <ul>
+                    <li><a href="" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
+                    <li><a href="" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+
+                    <li><a href="#" class="w3_agile_dribble"><i class="fa fa-youtube-square" aria-hidden="true"></i></a></li>
+
+                    <li><a href="#" class="w3_agile_vimeo"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+
+                    <li><a href="" class="w3_agile_dribble"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+
+                    <li><a href="" class="w3_agile_vimeo"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+            <div class="payment-w3ls">  
+                <img src="images/card.png" alt=" " class="img-responsive">
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div-->
+<!-- //footer -->
+{% endblock %}

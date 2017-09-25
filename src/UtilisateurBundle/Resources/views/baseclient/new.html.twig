@@ -1,0 +1,77 @@
+{% extends "UtilisateurBundle::template_client.html.twig" %}
+
+
+{% block breadcrumbs %}
+    <li><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+    <li class="active">Inscription</li>
+{% endblock %}
+
+{% block page_title %}Inscription{% endblock %}
+
+{% block body_content %}
+	<div class="register">
+		<div class="container">
+
+			<h2>Inscrivez-vous</h2>
+			<div class="login-form-grids">
+				
+				{{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+					{{ form_errors(form) }}
+						<h5>Information de profil</h5>
+
+						<div class="form-group">
+							{{ form_errors(form.prenom) }}
+							{{ form_widget(form.prenom, {'attr': {'class': 'form-control', 'placeholder':'Prénom'}}) }}
+						</div>
+
+						<div class="form-group">
+							{{ form_errors(form.nom) }}
+							{{ form_widget(form.nom, {'attr': {'class': 'form-control', 'placeholder':'Nom'}}) }}
+							
+						</div>
+
+						<h6>Photo de profil</h6>
+
+						<div class="form-group">
+						    {{ form_errors(form.imageFile) }}
+						    {{ form_widget(form.imageFile, {'attr': {'class': 'form-control'}}) }}
+						    
+						</div>
+					
+						<div class="register-check-box">
+							<div class="check">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>Subscribe to Newsletter</label>
+							</div>
+						</div>
+
+						<h6>Information de connexion</h6>
+
+						<div class="form-group">
+							{{ form_errors(form.password) }}
+							{{ form_widget(form.password, {'attr': {'class': 'form-control', 'placeholder':'Mot de passe'}}) }}
+						</div>
+
+						<!--div class="register-check-box">
+							<div class="check">
+								<label class="checkbox"><input type="checkbox" name="checkbox"><i> </i>I accept the terms and conditions</label>
+							</div>
+						</div-->
+						
+						<span>{{ form_widget(form.Valider, {'attr': {'class': 'btn btn-success'}}) }}</span>
+						<span>{{ form_widget(form.Annuler, { 'attr': {'class': 'btn btn-warning'}}) }}</span>
+
+					{{ form_rest(form) }}
+
+				{{ form_end(form) }}
+			</div>
+
+			<div class="register-home">
+				<a href="{{ path('base_base_index') }}">Home</a>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}
+
+
+

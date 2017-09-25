@@ -1,3 +1,48 @@
-app:
-    resource: '@AppBundle/Controller/'
-    type: annotation
+base:
+    resource: "@BaseBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+utilisateur:
+    resource: "@UtilisateurBundle/Controller/"
+    type:     annotation
+    prefix:   /utilisateur
+
+evenement:
+    resource: "@EvenementBundle/Controller/"
+    type:     annotation
+    prefix:   /evenement
+
+campement:
+    resource: "@CampementBundle/Controller/"
+    type:     annotation
+    prefix:   /campement
+
+culture:
+    resource: "@CultureBundle/Controller/"
+    type:     annotation
+    prefix:   /culture
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin
+
+restauration:
+    resource: "@RestaurationBundle/Controller/"
+    type:     annotation
+    prefix:   /restauration
+
+hotellerie:
+    resource: "@HotellerieBundle/Controller/"
+    type:     annotation
+    prefix:   /hotellerie
+
+boutique:
+    resource: "@BoutiqueBundle/Controller/"
+    type:     annotation
+    prefix:   /boutique
+
+#app:
+ #   resource: '@AppBundle/Controller/'
+  #  type: annotation

@@ -1,0 +1,62 @@
+{% extends "BaseBundle::template.html.twig" %}
+
+{% block body_content %}
+<div class="container">
+	<div class="about">
+		<div class="w3_agileits_contact_grids">
+			<div class="col-md-4 w3_agileits_contact_grid_left">
+				<div class="agile_map">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.3905851087434!2d-34.90500565012194!3d-8.061582082752993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18d90992e4ab%3A0x8e83c4afabe39a3a!2sSport+Club+Do+Recife!5e0!3m2!1sen!2sin!4v1478684415917" style="border:0"></iframe>
+				</div>
+				
+			</div>
+			<div class="col-md-8 w3_agileits_contact_grid_right" style="padding-left:2em;">
+				<h3 class="w3_agile_header">Laissez nous un message</h3>
+
+				{{ form_start(form) }}
+					{{ form_errors(form) }}
+
+						<span class="input input--ichiro">
+							{{ form_widget(form.prenom, {'attr': {'class': 'input__field input__field--ichiro', 'placeholder':'Prénom'}}) }}
+							
+							<label class="input__label input__label--ichiro" for="adminbundle_message_prenom">
+								<span class="input__label-content input__label-content--ichiro">Prénom</span>
+							</label>
+						</span>
+
+						<span class="input input--ichiro">
+							{{ form_widget(form.nom, {'attr': {'class': 'input__field input__field--ichiro', 'placeholder':'Nom'}}) }}
+							
+							<label class="input__label input__label--ichiro" for="adminbundle_message_nom">
+								<span class="input__label-content input__label-content--ichiro">Nom</span>
+							</label>
+						</span>
+
+						<span class="input input--ichiro">
+							{{ form_widget(form.email, {'attr': {'class': 'input__field input__field--ichiro', 'placeholder':'E-mail'}}) }}
+							
+							<label class="input__label input__label--ichiro" for="adminbundle_message_email">
+								<span class="input__label-content input__label-content--ichiro">E-mail</span>
+							</label>
+						</span>
+
+						
+						{{ form_widget(form.message, {'attr': {'placeholder':'Votre message'}}) }}
+						
+						<span>{{ form_widget(form.Envoyer, {'attr': {'class': 'btn btn-success', 'style': 'width: 40%;'}}) }}</span>
+						<span>{{ form_widget(form.Annuler, { 'attr': {'class': 'btn btn-warning', 'style': 'width: 40%;'}}) }}</span>
+				
+					{{ form_rest(form) }}
+				{{ form_end(form) }}
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
+
+{% block breadcrumbs %}
+	<li><a href="{{ path('base_base_index') }}"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Home</a></li>
+    <li class="active">Contact</li>
+{% endblock %}

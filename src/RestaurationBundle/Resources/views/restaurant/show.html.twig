@@ -1,0 +1,50 @@
+{% extends "RestaurationBundle::template_admin.html.twig" %}
+
+{% block item_restaurant %}active{% endblock %}
+
+{% block breadcrumbs %}
+    <li class="active"><a href="#"><i class="fa fa-dashboard"></i> Accueil</a></li>
+{% endblock %}
+
+{% block page_title %}Détails restaurant{% endblock %}
+
+{% block body_content %}
+
+	<div class="row">
+		<div class="content">
+			<div class="col-sm-4">
+				<img class="img-responsive" src="{{ asset('uploads/images/restaurant/' ~ restaurant.image )}}" alt="{{ restaurant.nom }}">
+			</div>
+
+			<div class="col-sm-6">
+			
+				<div class="box box-solid">
+				    <div class="box-header with-border">
+				    	<h1 class="box-title">{{ restaurant.nom }}</h1>
+				    </div>
+
+
+				    <div class="box-body" style="font-size:15px;">
+				    	<dl>
+				        	<dt>Nom</dt>
+				        	<dd>{{ restaurant.departement }}</dd>
+
+				        	<dt>Description</dt>
+				        	<dd>{{ restaurant.description }}</dd>
+
+				        	<dt>Département</dt>
+				        	<dd>{{ restaurant.departement }}</dd>
+
+				        	<dt>Adresse</dt>
+				        	<dd>{{ restaurant.adresse }}</dd>
+
+				        	<dt>Contact</dt>
+				        	<dd>{{ restaurant.contact }}</dd>
+
+				      	</dl>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

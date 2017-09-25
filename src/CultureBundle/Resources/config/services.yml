@@ -1,0 +1,4 @@
+services:
+#    culture.example:
+#        class: CultureBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

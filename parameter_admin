@@ -1,0 +1,17 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: mrbe.myd.infomaniak.com
+    database_port: null
+    #database_host: mrbe.myd.infomaniak.com
+    database_name: mrbe_boutique
+    database_user: mrbe_dialo
+    database_password: diallo2424
+    #database_name: delacasamance
+    #database_user: root
+    #database_password: passer
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 252cd078eea76d9bab3e1c4b08768df81e773cbf
+
